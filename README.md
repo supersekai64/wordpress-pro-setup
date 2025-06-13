@@ -1,277 +1,242 @@
 # 🚀 WordPress Pro Setup
 
-> **Script PowerShell d'automatisation complète pour créer des environnements de développement WordPress avec Docker et Visual Studio Code**
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue?logo=powershell)
+![Docker](https://img.shields.io/badge/Docker-Automated%20Installation-blue?logo=docker)
+![VS Code](https://img.shields.io/badge/VS%20Code-Automated%20Setup-blue?logo=visual-studio-code)
+![WordPress](https://img.shields.io/badge/WordPress-Latest-blue?logo=wordpress)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue)](https://docs.microsoft.com/en-us/powershell/)
-[![Docker](https://img.shields.io/badge/Docker-Required-blue)](https://www.docker.com/)
-[![WordPress](https://img.shields.io/badge/WordPress-Latest-blue)](https://wordpress.org/)
+> **Automatisez votre environnement de développement WordPress en 5 minutes !**
 
-## 📖 À propos
+Script PowerShell qui crée automatiquement un environnement de développement WordPress professionnel avec Docker et Visual Studio Code. Plus de configuration manuelle, plus de conflits de ports - tout est géré automatiquement !
 
-**WordPress Pro Setup** transforme la création d'environnements WordPress de développement de 3 heures de configuration manuelle à **5 minutes chrono** ! 
+## ✨ Fonctionnalités Principales
 
-Ce script PowerShell automatise entièrement la configuration d'un environnement de développement WordPress professionnel avec Docker, incluant la vérification et l'installation automatique de tous les prérequis.
-
-### 🎯 Problème résolu
-
-Fini les configurations manuelles fastidieuses :
-- ❌ Installation manuelle de Docker, PHP, MySQL, VS Code
-- ❌ Configuration des ports qui entrent en conflit
-- ❌ Création manuelle des fichiers docker-compose.yml
-- ❌ Installation une par une des extensions VS Code
-- ❌ Oubli d'étapes cruciales dans la configuration
-
-## ✨ Fonctionnalités principales
-
-### 🔍 **Détection et installation automatique**
-- Vérification complète des prérequis
-- Installation automatique via Chocolatey : Docker, Node.js, Composer, VS Code, Git
-- Configuration d'environnement intelligente
-
-### 🧠 **Gestion intelligente des ports**
-- Détection automatique des ports libres
-- Sauvegarde et réutilisation des configurations de ports par projet
-- Gestion de projets multiples sans conflit
-
-### ⚙️ **Configuration sur mesure**
-- **PHP** : Versions 8.0, 8.1, 8.2, 8.3
-- **WordPress** : Dernière version ou version spécifique
-- **MySQL** : Versions 5.7 ou 8.0
-- **Langue** : Configuration automatique en français
-
-### 💼 **Environnement VS Code complet**
-- **9 extensions WordPress** installées automatiquement
-- Workspace pré-configuré avec IntelliSense PHP
-- **Standards WordPress** avec PHP CodeSniffer intégré
-- Snippets WordPress personnalisés
-- Tâches Docker intégrées
-
-### 📁 **Structure de projet standardisée**
-```
-mon-projet/
-├── 📁 wordpress/              # Fichiers WordPress
-├── 📁 mysql/                 # Base de données persistante
-├── 🐳 docker-compose.yml     # Configuration conteneurs
-├── 💼 mon-projet.code-workspace # Workspace VS Code
-└── 📊 SYSTEM-INFO.md         # Documentation automatique
-```
-
-## 🚀 Installation et utilisation
-
-### Prérequis
-- **Windows 10/11** avec PowerShell 5.1+
-- **Droits administrateur** (pour installation des outils)
-- **Connexion internet** active
-
-### 🎬 Démarrage rapide
-
-1. **Télécharger le script**
-   ```powershell
-   # Télécharger depuis GitHub
-   Invoke-WebRequest -Uri "https://raw.githubusercontent.com/username/wordpress-pro-setup/main/WordPress Pro Setup.ps1" -OutFile "WordPress Pro Setup.ps1"
-   ```
-
-2. **Exécuter le script**
-   ```powershell
-   # Autoriser l'exécution (une seule fois)
-   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-   # Lancer le script
-   .\WordPress Pro Setup.ps1
-   ```
-
-3. **Suivre le menu interactif**
-   - Choix du nom de projet
-   - Sélection des versions (PHP, WordPress, MySQL)
-   - Configuration automatique des ports
-   - Démarrage automatique de l'environnement
-
-4. **Commencer à développer !**
-   - Site accessible sur `http://localhost:PORT`
-   - Admin : `http://localhost:PORT/wp-admin` (admin/admin123)
-   - phpMyAdmin : `http://localhost:PORT_PHPMYADMIN`
-
-## 🛠️ Ce qui est installé automatiquement
-
-### 📦 **Outils de développement**
-- **Docker Desktop** - Conteneurisation
+### 🔧 Installation Automatique des Outils
+Le script **installe automatiquement** tous les outils nécessaires :
+- **Docker Desktop** - Conteneurisation et environnement isolé
+- **Visual Studio Code** - Éditeur de code optimisé
 - **Git** - Contrôle de version
-- **Node.js** - Runtime JavaScript
+- **Node.js** - JavaScript runtime et npm
 - **Composer** - Gestionnaire de dépendances PHP
-- **Visual Studio Code** - Éditeur de code
-- **Chocolatey** - Gestionnaire de paquets Windows
+- **PHP CodeSniffer** - Standards de code WordPress
 
-### 🔌 **Extensions VS Code**
+### 🎯 Configuration Intelligente
+- **Gestion des ports automatique** - Détecte et évite les conflits
+- **Projets multiples** - Chaque projet sur des ports différents
+- **Versions personnalisables** - PHP (7.4, 8.0, 8.1, 8.2, 8.3), WordPress, MySQL
+- **WordPress en français** - Configuration française par défaut
+
+### 🔌 Extensions VS Code Pré-configurées
 - **Docker** - Gestion des conteneurs
 - **PHP IntelliSense** - Autocomplétion PHP avancée
 - **WordPress Toolbox** - Outils spécialisés WordPress
-- **WordPress Hooks** - IntelliSense pour les hooks WordPress
-- **PHP DocBlocker** - Documentation PHP automatique
+- **WordPress Hooks IntelliSense** - Hooks et filtres WordPress
+- **PHP DocBlocker** - Documentation automatique
 - **Prettier** - Formatage de code
-- **Tailwind CSS** - Support CSS
-- **Auto Rename Tag** - Renommage automatique des balises
-- **Path Intellisense** - Autocomplétion des chemins
+- **Et 3 autres extensions essentielles**
 
-### 🐳 **Stack Docker**
-- **WordPress** (dernière version ou spécifique)
-- **MySQL** (5.7 ou 8.0)
-- **phpMyAdmin** - Interface de gestion BDD
-- **WP-CLI** - Interface en ligne de commande WordPress
+### 🐳 Stack Docker Complète
+- **WordPress** avec WP-CLI intégré
+- **MySQL** (5.7 ou 8.0) avec base pré-configurée
+- **phpMyAdmin** pour la gestion BDD
+- **Configuration optimisée** pour le développement
 
-### 🔌 **Configuration WordPress**
-- **Langue française** par défaut
-- **Query Monitor** installé (débogage/optimisation)
-- **Plugins indésirables supprimés** (Hello Dolly, Akismet)
-- **Debug mode activé** pour le développement
+## 📋 Prérequis
 
-## 📋 Fonctionnalités avancées
+- **Windows 10/11** (64-bit)
+- **PowerShell 5.1+** (intégré à Windows)
+- **Droits administrateur** (pour l'installation des outils)
+- **Connexion Internet** (pour télécharger les outils et images Docker)
 
-### 🎯 **Menu principal**
-1. **Créer un nouveau projet WordPress**
-2. **Lister les projets existants**
-3. **Vérifier les outils installés**
-4. **Gestion des ports intelligents**
-5. **Aide et documentation**
+> ⚠️ **Important** : Docker et VS Code seront installés automatiquement par le script si absent !
 
-### 🔌 **Gestion des ports intelligents**
-- Affichage des ports utilisés par projet
-- Nettoyage des ports inutilisés
-- Statistiques d'utilisation des ports
-- Détection des conflits
+## 🚀 Installation
 
-### 📊 **Documentation automatique**
-Chaque projet génère automatiquement :
-- **SYSTEM-INFO.md** - Guide complet du projet
-- **Raccourci bureau** - Accès rapide au projet
-- **Configuration VS Code** - Workspace prêt à l'emploi
+### 1. Télécharger le Script
+```powershell
+# Cloner le repository
+git clone https://github.com/username/wordpress-pro-setup.git
+cd wordpress-pro-setup
 
-## 🛠️ Commandes Docker utiles
+# Ou télécharger directement le fichier PowerShell
+```
 
-Le script génère automatiquement des tâches VS Code pour :
+### 2. Lancer le Script
+```powershell
+# Ouvrir PowerShell en tant qu'Administrateur
+# Naviguer vers le dossier du script
+.\WordPress Pro Setup.ps1
+```
 
+### 3. Suivre l'Assistant
+Le script vous guidera à travers :
+1. **Vérification automatique** des outils (installation si manquant)
+2. **Configuration du projet** (nom, versions)
+3. **Création de l'environnement** (Docker + VS Code)
+4. **Démarrage automatique** du projet
+
+## 📖 Utilisation
+
+### Menu Principal
+```
+╭──────────────────────────────────────────────╮
+│            WORDPRESS PRO SETUP              │
+├──────────────────────────────────────────────┤
+│                                              │
+│  1. 🚀 Créer un nouveau projet WordPress     │
+│  2. 🔧 Vérifier les outils installés         │
+│  3. 📚 Aide et documentation                 │
+│  4. ❌ Quitter                               │
+│                                              │
+╰──────────────────────────────────────────────╯
+```
+
+### Création d'un Projet
+1. **Choisir un nom** de projet (ex: "mon-site-wp")
+2. **Sélectionner les versions** PHP, WordPress, MySQL
+3. **Laisser le script travailler** (5-10 minutes)
+4. **Projet prêt !** VS Code s'ouvre automatiquement
+
+### Accès aux Services
+- **WordPress** : `http://localhost:8080` (port auto-assigné)
+- **phpMyAdmin** : `http://localhost:8081` (port auto-assigné)
+- **Admin WordPress** : `admin` / `admin123`
+- **Base de données** : `wordpress_db` / `wordpress` / `wordpress_password`
+
+## 🛠️ Commandes Docker Utiles
+
+### Gestion des Conteneurs
 ```bash
-# Gestion des conteneurs
-docker-compose up -d          # Démarrer
-docker-compose down           # Arrêter
-docker-compose restart        # Redémarrer
-docker-compose logs -f        # Voir les logs
+# Démarrer l'environnement
+docker-compose up -d
 
-# WP-CLI
-docker-compose exec wp-cli wp plugin list
-docker-compose exec wp-cli wp theme list
+# Arrêter l'environnement
+docker-compose down
+
+# Voir les logs
+docker-compose logs -f
+
+# Redémarrer un service
+docker-compose restart wordpress
+```
+
+### WP-CLI (WordPress Command Line)
+```bash
+# Accéder au terminal WP-CLI
+docker-compose exec wp-cli bash
+
+# Installer un plugin
+docker-compose exec wp-cli wp plugin install contact-form-7 --activate
+
+# Créer un utilisateur
+docker-compose exec wp-cli wp user create john john@example.com --role=editor
+
+# Exporter la base de données
 docker-compose exec wp-cli wp db export backup.sql
+```
 
-# PHP CodeSniffer
+### PHP CodeSniffer (Standards WordPress)
+```bash
+# Vérifier le code PHP
 docker-compose exec wp-cli phpcs --standard=WordPress /var/www/html/wp-content/themes/
+
+# Corriger automatiquement
+docker-compose exec wp-cli phpcbf --standard=WordPress /var/www/html/wp-content/themes/
 ```
 
-## 🔧 Configuration personnalisée
+## 📂 Structure du Projet
 
-### Modifier les ports par défaut
-Éditez la fonction `Get-Configuration` dans le script :
+```
+mon-projet-wp/
+├── docker-compose.yml      # Configuration Docker
+├── mon-projet-wp.code-workspace  # Workspace VS Code
+├── SYSTEM-INFO.md         # Documentation du projet
+├── wordpress/             # Fichiers WordPress
+│   ├── wp-content/
+│   │   ├── themes/        # Vos thèmes personnalisés
+│   │   └── plugins/       # Vos plugins personnalisés
+│   └── ...
+├── mysql/                 # Base de données MySQL
+└── .vscode/               # Configuration VS Code
+    ├── settings.json      # Paramètres optimisés
+    ├── tasks.json         # Tâches automatisées
+    └── snippets/          # Snippets WordPress
+```
 
+## 🔧 Configuration VS Code
+
+### Paramètres Optimisés
+- **PHP IntelliSense** configuré pour WordPress
+- **Formatage automatique** avec Prettier
+- **Standards WordPress** avec PHPCS
+- **Débogage PHP** pré-configuré
+- **Emmet** activé pour PHP/HTML
+
+### Tâches Intégrées
+- 🚀 Démarrer WordPress
+- ⏹️ Arrêter WordPress  
+- 📋 Voir tous les logs
+- 📊 État des conteneurs
+- 🔧 Terminal WP-CLI
+- 📏 Vérifier code PHP (PHPCS)
+- 🔧 Corriger code PHP (PHPCBF)
+
+## ❓ Dépannage
+
+### Docker non démarré
 ```powershell
-$defaultConfig = @{
-    DefaultPorts = @{
-        WordPress = 8080    # Port WordPress
-        MySQL = 3306       # Port MySQL
-        PHPMyAdmin = 8081  # Port phpMyAdmin
-    }
-}
+# Vérifier l'état de Docker
+docker info
+
+# Démarrer Docker Desktop manuellement si nécessaire
 ```
 
-### Ajouter des plugins par défaut
+### Conflits de ports
+Le script détecte automatiquement les ports occupés. Si vous rencontrez des problèmes :
 ```powershell
-$defaultConfig = @{
-    DefaultPlugins = @(
-        "query-monitor",
-        "wp-super-cache",
-        "contact-form-7"
-    )
-}
+# Vérifier les ports utilisés
+netstat -an | findstr ":8080"
+
+# Le script proposera automatiquement des ports alternatifs
 ```
 
-## 🆘 Dépannage
-
-### Problèmes courants
-
-**🚨 "Port déjà utilisé"**
-- Le script détecte automatiquement les ports libres
-- Utilisez la gestion des ports intelligents (option 4)
-
-**🚨 "Docker non démarré"**
-- Lancez Docker Desktop manuellement
-- Le script attend que Docker soit prêt
-
-**🚨 "Permission denied"**
-- Exécutez PowerShell en tant qu'administrateur
-- Vérifiez la politique d'exécution : `Get-ExecutionPolicy`
-
-**🚨 "Extensions VS Code non installées"**
-- Redémarrez VS Code après la première installation
-- Installez manuellement : `code --install-extension nom-extension`
-
-### Logs et diagnostics
+### Extensions VS Code
 ```powershell
-# Voir les logs Docker
-docker-compose logs
+# Lister les extensions installées
+code --list-extensions
 
-# Vérifier le statut des conteneurs
-docker-compose ps
-
-# Redémarrer complètement
-docker-compose down && docker-compose up -d
+# Réinstaller une extension manuellement
+code --install-extension ms-azuretools.vscode-docker
 ```
 
-## 🤝 Contribution
+### Performance MySQL
+Si MySQL est lent à démarrer :
+- Augmenter la RAM allouée à Docker (4GB minimum recommandé)
+- Vérifier l'espace disque disponible
 
-Les contributions sont les bienvenues ! 
+## 🤝 Contribuer
 
 1. **Fork** le projet
-2. **Créer** une branche feature (`git checkout -b feature/AmazingFeature`)
-3. **Commiter** les changements (`git commit -m 'Add AmazingFeature'`)
-4. **Push** sur la branche (`git push origin feature/AmazingFeature`)
+2. **Créer** une branche pour votre fonctionnalité (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. **Commit** vos changements (`git commit -am 'Ajout de la nouvelle fonctionnalité'`)
+4. **Push** vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
 5. **Ouvrir** une Pull Request
 
-### Idées de contributions
-- Support pour d'autres OS (Linux, macOS)
-- Templates de projets prédéfinis
-- Intégration CI/CD
-- Interface graphique
+## 📄 Licence
 
-## 📝 Changelog
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-### Version 2.1 (Actuelle)
-- ✅ Gestion intelligente des ports multiples projets
-- ✅ Menu interactif complet
-- ✅ Documentation automatique (SYSTEM-INFO.md)
-- ✅ Raccourcis bureau automatiques
-- ✅ Support PHP 8.3
-- ✅ Amélioration de la stabilité Docker
+## ⭐ Support
 
-### Version 2.0
-- ✅ Refactorisation complète du code
-- ✅ Interface utilisateur améliorée
-- ✅ Gestion des erreurs robuste
-- ✅ Support projets multiples
-
-## 📄 License
-
-Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
-## 👨‍💻 Auteur
-
-**Paul CORNILLAD**
-- LinkedIn: [paul-cornillad](https://www.linkedin.com/in/paul-cornillad/)
-- GitHub: [@paul-cornillad](https://github.com/paul-cornillad)
+Si ce script vous fait gagner du temps, n'hésitez pas à :
+- ⭐ **Mettre une étoile** au projet
+- 🐛 **Signaler des bugs** via les Issues
+- 💡 **Proposer des améliorations**
+- 📢 **Partager** avec d'autres développeurs
 
 ---
 
-<div align="center">
+**Développé avec ❤️ par [Paul CORNILLAD](https://www.linkedin.com/in/paul-cornillad/)**
 
-**⭐ N'oubliez pas de mettre une étoile si ce projet vous aide ! ⭐**
-
-*Développé avec ❤️ pour la communauté WordPress*
-
-</div>
+*Automatisez votre workflow WordPress et concentrez-vous sur l'essentiel : le code !*
